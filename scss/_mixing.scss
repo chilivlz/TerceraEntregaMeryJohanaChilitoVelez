@@ -1,0 +1,87 @@
+
+
+//mixing
+
+@mixin texto ($fontfamily,$fontsize, $fontweight, $lineheight, $color, $margin,$paddingleft,$paddingright,){
+    font-family: $mainFont;
+    font-size: $fontsize;
+    font-weight: $fontweight;
+    line-height: $lineheight;
+    color: $color;
+    margin: $margin;
+    padding-left: $paddingleft;
+    padding-right: $paddingright;
+}
+
+@mixin main-text ($fontsize, $margin, $fontweight, $color){
+    font-size: $fontsize;
+    margin: $margin;
+    font-weight: $fontweight;
+    color: $color;
+}
+
+@mixin tex-b ($textalign,$font-size,$margin,$color){
+    text-align:$textalign;
+    font-size: $font-size;
+    margin: $margin;
+    color: $color;    
+}
+
+
+@mixin flex ($displayflex, $justifycontect, $alignitems,$flexdirection ){
+    display: $displayflex;
+    justify-content: $justifycontect;
+    align-items: $alignitems;
+    flex-direction: $flexdirection;
+
+}
+@mixin flexTwo ($position,$display,$justifycontect,$alignitems,$margin,$flexwrap ){
+    position: $position;
+    display: $display;
+    justify-content: $justifycontect;
+    align-items: $alignitems;
+    margin: $margin;
+    flex-wrap: $flexwrap;
+}
+    
+//img mixing//
+@mixin img ($height,$width,$margin,$paddingright,$paddingleft){
+    height: $height;
+    width: $width;
+    margin: $margin;
+    padding-right: $paddingright;
+    padding-left: $paddingleft;
+}  
+
+
+//grid//
+@mixin grid-wrapper ($margintop,$marginleft,$marginright,$padding,$maxwidth,$height,$vertical-aligh,$display) {
+    margin-top: $margintop;
+    margin-left: $marginleft;
+    margin-right: $marginright;
+    padding: $padding;
+    max-width: $maxwidth;
+    height: $height;
+    vertical-align: $vertical-aligh;
+    display: $display;
+
+}
+
+@mixin contenedor($backgroundposition,$width,$height,$margin,$marginleft){
+    background-position: $backgroundposition;
+    width: $width;
+    height: $height;
+    margin: $margin;
+    margin-left: $marginleft;
+}
+
+
+
+
+
+//Desktop responsive y Tablet//
+
+
+
+
+  

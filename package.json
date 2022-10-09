@@ -1,0 +1,23 @@
+{
+  "name": "trabajo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1","sass": "sass",
+		"sass:watch": "sass --watch scss/main.scss  css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chilivlz/MeryJohanaChilitoSegundaEntrega.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chilivlz/MeryJohanaChilitoSegundaEntrega/issues"
+  },
+  "homepage": "https://github.com/chilivlz/MeryJohanaChilitoSegundaEntrega#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

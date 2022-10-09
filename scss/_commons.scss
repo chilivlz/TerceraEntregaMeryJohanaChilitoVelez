@@ -1,0 +1,486 @@
+//anidacion -  nesting
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $mainFont
+ 
+}
+
+body{
+    background-color: map-get($map:$paleta, $key:'maincolor' )
+}
+
+//Nav bar
+#botonera{
+  background-color: map-get($map: $paleta, $key:'secondaryColor');
+  font-size: $textSm;
+  img{
+    width: 98px;
+
+  }
+  ul{
+    li{
+        a{
+            color: $keyColor
+        }
+    }
+  }
+
+
+}
+
+//Menu
+
+.profile-img{
+    width:100%
+}
+
+
+main{
+    text-align: center;
+    .main-p{
+        @include texto($mainFont, $textMd,bold,1.3,$keyColor,20px auto,30px,30px)
+        
+       
+    }
+}
+
+.main-text{
+    @include  main-text ( 50px,9px,$keyColor,bold)
+    
+}
+
+
+.text-b{
+    @include tex-b(center,$textXL,11,$keyColor)
+}
+
+
+
+
+
+//blog
+
+
+
+.prod-img{
+   
+    @include flex( flex, center,center,column);
+
+    
+}
+
+.prod-img-a {
+  
+   
+    width: 100%;
+    max-width: 90%;
+    margin: 20;
+    margin: 10px auto;
+}
+
+.prod-img-b {
+    width: 100%;
+    max-width: 90%;
+    margin: 10px auto;
+    padding-top: 16;
+}
+
+.prod-img-c {
+    width: 100%;
+    max-width: 90%;
+    margin: 10;
+    margin: 10px auto;
+}
+
+
+
+
+.prod-button{
+
+    color: $keyColor;
+    font-family:$mainFont;
+    border: none;
+    font-size: $textMd;
+    padding: 0.8em 1em;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 15px auto;
+    background-color:#B6D1F9;
+    border: double $keyColor;
+    &:hover{
+        filter: brightness(130%);
+    }
+
+}
+
+
+.main-p-dos{
+    text-align:$textalign;
+    font-size: $textMd;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: $mainFont;
+    margin: 11;
+ }
+
+ .main-p-dos h3 {
+    font-size: $textXL;
+    margin: top 20px;
+
+
+}
+//desktop
+
+
+
+   .prod-dos{
+
+    @include media (desktop){
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 95%;
+        margin: 10px auto;
+        padding-top: 16;
+
+    }
+    .prod-img-c{
+        height: 100%;
+    }
+    
+
+}
+
+.main-p{
+
+    display: flex;
+    justify-content: space-between;
+   
+    
+}
+
+
+.main-p .img-container{
+    @include media (desktop){
+        background-image:url(../Imagenes/0afd14d064e603c5e00301da90a74db9.jpeg);
+        background-position: center center;
+        width: 200rem;
+        height: auto;
+        margin: 30px;
+        margin-left: 30px;
+     
+
+    }
+
+
+}
+
+
+
+
+.main-p .texto{
+    align-content: flex-end;
+    padding: 0px 30px;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    
+
+
+}
+
+
+.main-blog h3{
+    @include media (desktop){
+        text-align: center;
+
+    }
+}
+
+
+.main-blog {
+    @include media (desktop){
+    display: flex;
+   justify-content: left;
+   height: 15%;
+   padding: 0px 30px;
+   line-height: 1.1;
+   margin: 8px 0px;
+
+
+
+    }
+}
+
+
+
+
+
+ //footer
+
+footer{
+    background-color: map-get($map:$paleta, $key:'secondaryColor' );
+    position: relative;
+    min-height: 100px;
+    width: 100%;
+    @include flex( flex, center,center,column)
+ 
+}
+
+footer .social-icon{
+    @include flexTwo ( relative,flex,center,center,10px 0, wrap)
+   
+}
+
+footer .social-icon li{
+    list-style: none;
+}
+
+.red-social__titulo {
+    display: block;
+    font-size:$textMd;
+    text-align: center;
+    }
+
+
+footer .social-icon li a{
+    font-size: $texteRem2;
+    color: $keyColor;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s; 
+    &:hover{
+        transform: translateY(-9px);
+    }
+
+}
+
+
+//poadcast
+ .pod-ca{
+    width: $width;
+    max-width: 90%;
+    margin: 10;
+    margin: 10px auto;
+
+}
+
+
+//Acerca de mi + responsive //
+
+.acerca-text {
+
+    .acerca-de-mi p{
+        @extend .main-text;
+
+   
+    }
+
+   
+}
+
+.acerca-de-mi img{
+    @include img(auto,25rem,10px,10px,10px)
+}
+
+//carrusel//
+
+.slide{
+    display: flex;
+    justify-content: center center;
+    margin-top: 20px ;
+    margin-block-end: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+ }
+
+//
+ .text.c{
+
+    @extend .text-b; 
+
+ }
+//blg//
+ .main-p-tres{
+    text-align:$textalign;
+    font-size: $textSm ;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: $mainFont;
+    margin: 11;
+
+ }
+
+ .main-p-tres h3 {
+    font-size: $textLg;
+    margin: top 20px;
+
+
+}
+
+//desktop//
+.acerca-de-mi {
+    @include media(desktop){
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;    
+
+            .acerca-img{
+                margin-top: 20px;
+                padding-right: 10px;
+                padding-left: 5px;
+
+                .acerca-de-mi p{
+                    padding-right: 20px;
+                }
+
+                .acerca-txt{
+                    margin-top: 25px;
+                
+                 }
+
+            }
+        
+
+    }
+}
+
+//galeria - arte//
+
+.grid-wrapper{
+   @include grid-wrapper (60px,30x,30px,10px,10px 10px, 100% auto,middle,inline-block);
+   .grid-item{
+    &:hover{
+        filter: opacity(0.9);
+        transform: scale(1.04);
+    }
+   }
+}
+
+
+/* grid galeriai mg*/
+
+.title-grid {
+  
+    @extend .main-text;
+    
+}
+.grid-wrapper  > div {
+    
+  @include flex( flex,center,center,center)
+     
+}
+.grid-wrapper > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+
+
+
+
+@media (min-width: 760px) {
+    .wide{
+    grid-column: span 2;
+}
+
+.tall{
+    grid-row: span 2;
+
+
+
+}
+
+}
+
+
+
+
+//contactame +responsive//
+
+.mensaje-contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contacto__input {
+    width: 100%;
+    margin: 0.5rem auto;
+    padding: 1.2rem;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.contacto__input--size {
+    width: 50%;
+}
+
+.ubicacion{
+    padding-right: 20px;
+}
+
+
+//contactame + responsive//
+.contacto {
+    @include media (desktop){
+
+     flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    
+}
+
+
+.contacto__input--size {
+    width: 50%;
+}
+
+.ubicacion{
+    padding: 30px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
